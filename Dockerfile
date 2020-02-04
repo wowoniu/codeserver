@@ -9,6 +9,12 @@ RUN sudo apt-get update && sudo apt-get install -y \
 	gcc \
 	&& sudo rm -rf /var/lib/apt/lists/*
 
+
+RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin" >> /etc/profile
+RUN sudo echo "export GOPATH=/home/coder/go" >> /etc/profile
+RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin" >> /home/corder/.bashrc
+RUN sudo echo "export GOPATH=/home/coder/go" >> /home/coder/.bashrc
+
 USER coder
 RUN mkdir -p /home/coder/go 
 RUN mkdir -p /home/coder/soft
@@ -18,10 +24,7 @@ WORKDIR /home/coder/soft
 RUN wget https://dl.google.com/go/go1.12.16.linux-amd64.tar.gz
 RUN sudo tar -C /usr/local -xzf go1.12.16.linux-amd64.tar.gz \
      && rm go1.12.16.linux-amd64.tar.gz
-RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin" >> /etc/profile
-RUN sudo echo "export GOPATH=/home/coder/go" >> /etc/profile
-RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin" >> /home/corder/.bashrc
-RUN sudo echo "export GOPATH=/home/coder/go" >> /home/coder/.bashrc
+
 RUN export PATH=$PATH:/usr/local/go/bin \
         && export GOPATH=/home/coder/go \
 		&& export GO111MODULE=on \
