@@ -3,8 +3,7 @@ FROM codercom/code-server
 
 COPY apt-get-source.list /etc/apt/sources.list
 
-RUN sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak \
-    && sudo apt-get update && sudo apt-get install -y \
+RUN sudo apt-get update && sudo apt-get install -y \
 	gcc \
 	&& sudo rm -rf /var/lib/apt/lists/* \
 	&& sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin" >> /home/coder/.bashrc \
