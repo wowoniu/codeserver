@@ -30,7 +30,7 @@ RUN export PATH=$PATH:/usr/local/go/bin \
 #RUN go get -v golang.org/x/tools/gopls
 
 #install vscode extension
-RUN wget https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/Go/0.13.0/vspackage
+RUN wget -O ms-vscode.Go-0.13.0.vsix https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/Go/0.13.0/vspackage
 RUN code-server --install-extension ms-vscode.Go-0.13.0.vsix
 
 
