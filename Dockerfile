@@ -18,7 +18,7 @@ WORKDIR /home/coder/soft
 RUN wget https://dl.google.com/go/go1.12.16.linux-amd64.tar.gz
 RUN sudo tar -C /usr/local -xzf go1.12.16.linux-amd64.tar.gz \
      && rm go1.12.16.linux-amd64.tar.gz
-#RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin\nexport GOPATH=/home/coder/go\n" >> /etc/profile
+RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin\nexport GOPATH=/home/coder/go\n" >> /etc/profile
 RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin\nexport GOPATH=/home/coder/go\n" >> /home/coder/.bashrc
 RUN export PATH=$PATH:/usr/local/go/bin \
         && export GOPATH=/home/coder/go \
