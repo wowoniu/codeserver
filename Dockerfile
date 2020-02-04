@@ -12,7 +12,7 @@ RUN sudo apt-get update && sudo apt-get install -y \
 
 # RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin" >> /etc/profile
 # RUN sudo echo "export GOPATH=/home/coder/go" >> /etc/profile
-RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin" >> /home/corder/.bashrc
+RUN sudo echo "export PATH=$PATH:/usr/local/go/bin:/home/coder/go/bin" >> /home/coder/.bashrc
 RUN sudo echo "export GOPATH=/home/coder/go" >> /home/coder/.bashrc
 
 USER coder
