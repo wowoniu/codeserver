@@ -1,12 +1,12 @@
 # We deploy with Ubuntu so that devs have a familiar environment.
 FROM codercom/code-server
 
-COPY apt-get-source.list /etc/apt/sources.list
-COPY vscode-extensions ./vscode-extensions/
-
 
 USER coder
 RUN mkdir -p /home/coder/go && mkdir -p /home/coder/soft
+
+COPY apt-get-source.list /etc/apt/sources.list
+COPY vscode-extensions /home/coder/soft/vscode-extensions/
 
 RUN sudo apt-get update && sudo apt-get install -y \
 	gcc \
