@@ -27,9 +27,10 @@ RUN wget https://dl.google.com/go/go1.12.16.linux-amd64.tar.gz \
 #RUN go get -v golang.org/x/tools/gopls
 
 #install vscode extension
-#RUN wget -O ms-vscode.Go-0.13.0.vsix https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/Go/0.13.0/vspackage
-#RUN code-server --install-extension ms-vscode.Go-0.13.0.vsix
-
+COPY vscode-extensions ./vscode-extensions/
+RUN  code-server --install-extension ./vscode-extensions/Go-0.12.1-beta.3.vsix \
+     && code-server --install-extension ./vscode-extensions/gitlens-10.2.1.vsix \
+     && code-server --install-extension ./vscode-extensions/php-intellisense.vsi
 
 
 
