@@ -30,7 +30,7 @@ RUN wget https://dl.google.com/go/go1.12.16.linux-amd64.tar.gz \
 COPY vscode-extensions ./vscode-extensions/
 RUN  code-server --install-extension ./vscode-extensions/Go-0.12.1-beta.3.vsix \
      && code-server --install-extension ./vscode-extensions/gitlens-10.2.1.vsix \
-     && code-server --install-extension ./vscode-extensions/php-intellisense.vsi
+     && code-server --install-extension ./vscode-extensions/php-intellisense.vsix
 
 
 
