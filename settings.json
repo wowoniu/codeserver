@@ -1,0 +1,6 @@
+{
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreview": false,
+    "editor.fontSize": 20,
+    "go.gopath": "/home/coder/go"
+}
