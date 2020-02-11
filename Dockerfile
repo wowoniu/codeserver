@@ -26,6 +26,8 @@ RUN wget https://dl.google.com/go/go1.12.16.linux-amd64.tar.gz \
     && sudo tar -C /usr/local -xzf go1.12.16.linux-amd64.tar.gz \
     && rm go1.12.16.linux-amd64.tar.gz 
     
+    
+    github.com/stamblerre/gocode
 RUN export PATH=$PATH:/usr/local/go/bin \
         && export GOPATH=/home/coder/go \
 #	&& export GO111MODULE=on \
@@ -42,7 +44,9 @@ RUN export PATH=$PATH:/usr/local/go/bin \
 	&& go get  -v  github.com/josharian/impl \ 
 	&& go get  -v  github.com/rogpeppe/godef \ 
 	&& go get  -v  github.com/sqs/goreturns \ 
-	&& go get  -v  github.com/golang/lint/golint \ 
+	&& go get  -v  golang.org/x/lint/golint \ 
+	&& go get  -v  github.com/stamblerre/gocode \
+	&& go get  -v  github.com/davidrjenni/reftools/cmd/fillstruct \
 	&& go get  -v  github.com/cweill/gotests/... 
 
 
