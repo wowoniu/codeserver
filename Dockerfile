@@ -21,8 +21,8 @@ RUN wget https://dl.google.com/go/go1.12.16.linux-amd64.tar.gz \
     && export PATH=$PATH:/usr/local/go/bin \
     && export GOPATH=/home/coder/go \
 	&& export GO111MODULE=on \
-	&& go get -v github.com/go-delve/delve/cmd/dlv \
-	&& go get -v golang.org/x/tools/gopls@latest \
+	&& go get  -v github.com/go-delve/delve/cmd/dlv \
+	&& go get  -v golang.org/x/tools/gopls@latest \
 	&& go get  -v  github.com/nsf/gocode \ 
 	&& go get  -v  github.com/uudashr/gopkgs/cmd/gopkgs \ 
 	&& go get  -v  github.com/ramya-rao-a/go-outline \ 
@@ -35,8 +35,7 @@ RUN wget https://dl.google.com/go/go1.12.16.linux-amd64.tar.gz \
 	&& go get  -v  github.com/rogpeppe/godef \ 
 	&& go get  -v  sourcegraph.com/sqs/goreturns \ 
 	&& go get  -v  github.com/golang/lint/golint \ 
-	&& go get  -v  github.com/cweill/gotests/... \ 
-	&& go get  -v  github.com/derekparker/delve/cmd/dlv 
+	&& go get  -v  github.com/cweill/gotests/... 
 
 #install vscode extension
 COPY vscode-extensions ./vscode-extensions/
