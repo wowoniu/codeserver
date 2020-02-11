@@ -48,6 +48,6 @@ RUN export PATH=$PATH:/usr/local/go/bin \
 	&& go get  -v  github.com/davidrjenni/reftools/cmd/fillstruct \
 	&& go get  -v  github.com/cweill/gotests/... 
 
-
+COPY settings.json /home/coder/.local/share/code-server/User/
 
 WORKDIR /home/coder/project
