@@ -33,7 +33,7 @@ RUN wget https://dl.google.com/go/go1.12.16.linux-amd64.tar.gz \
 	&& go get  -v  github.com/haya14busa/goplay/cmd/goplay \ 
 	&& go get  -v  github.com/josharian/impl \ 
 	&& go get  -v  github.com/rogpeppe/godef \ 
-	&& go get  -v  sourcegraph.com/sqs/goreturns \ 
+	&& go get  -v  github.com/sqs/goreturns \ 
 	&& go get  -v  github.com/golang/lint/golint \ 
 	&& go get  -v  github.com/cweill/gotests/... 
 
