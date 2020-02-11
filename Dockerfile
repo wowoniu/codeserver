@@ -27,13 +27,12 @@ RUN wget https://dl.google.com/go/go1.12.16.linux-amd64.tar.gz \
     && rm go1.12.16.linux-amd64.tar.gz 
     
     
-    github.com/stamblerre/gocode
 RUN export PATH=$PATH:/usr/local/go/bin \
         && export GOPATH=/home/coder/go \
 #	&& export GO111MODULE=on \
-	&& go get  -v github.com/go-delve/delve/cmd/dlv \
-	&& go get  -v golang.org/x/tools/gopls \
-	&& go get  -v  github.com/nsf/gocode \ 
+	&& go get  -v  github.com/go-delve/delve/cmd/dlv \
+	&& go get  -v  golang.org/x/tools/gopls \
+	&& go get  -v  github.com/mdempsky/gocode \ 
 	&& go get  -v  github.com/uudashr/gopkgs/cmd/gopkgs \ 
 	&& go get  -v  github.com/ramya-rao-a/go-outline \ 
 	&& go get  -v  github.com/acroca/go-symbols \ 
